@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sally Student Resume</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+    <div id="application-root"></div>
+  
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type="text/babel">
+        // Our code will go here
+        const appRoot = document.querySelector('#application-root');
+        function App(params) {
+            return <div><NavBar/><HeaderFunc/><Main/></div>
+        }
+
+        function Main(params) {
+            return <main>
+                <p>I am an aspiring full stack developer that loves philosophy and history.</p>
+                <h2><a name="Skills"></a>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                </ul>
+                <h2><a name="EmploymentHistory"></a>Employment History</h2>
+                <ul>
+                    <li>
+                        <p>
+                            <b className="subheading">Startek 2000-2007</b><br/>
+                            <b>Senior technical advisor</b><br/>
+                                Provide excellent service while troubleshooting and resolving the customers issue.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b className="subheading">Apple 2007-2019</b><br/>
+                            <b>Senior Mac Specialist</b><br/>
+                            Provide excellent service while troubleshooting and resolving the customers issue.
+                        </p>
+                    </li>
+                </ul>
+                <h2><a name="Education"></a>Education</h2>
+                <ul>
+                    <li><p><b className="subheading">Mac Technical Institute                1996-2000</b><br/>
+                        Computer Science</p></li>
+                </ul>
+            </main>
+        }
+
+
+
+        function NavBar(params) {
+            return (
+                <nav>
+                    <ul className="nodot">
+                        <li ><a href="#Skills">Skills</a></li>
+                        <li ><a href="#EmploymentHistory">Employment History</a></li>
+                        <li ><a href="#Education">Education</a></li>
+                    </ul>
+                </nav>
+            )
+        }
+
+        function HeaderFunc(params) {
+            return (
+                <header>
+                    <h1>Sally Student</h1>
+                    <address>432 87th Street Bingham Co 80000, 808-123-4321, <a href="mailto:SallyStudent@gmail.com?subject=Schedule an interview">SallyStudent@gmail.com</a></address>
+                    <img src="SallyStudent.jpg" alt="picture of sally" width="500" height="600"/>
+                </header>
+            )
+        }
+
+
+        ReactDOM.render(<App/>, appRoot);
+    </script>
+  </body>
